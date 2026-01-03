@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ViralEngine - Viral Content Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25aff4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                        "surface-dark": "#182b34",
+                        "border-dark": "#223c49",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#101d23] dark:text-white overflow-x-hidden antialiased">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex w-full max-w-[1280px] items-center justify-between py-4">
+<div class="flex items-center gap-4 text-white">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 p-2 text-primary">
+<span class="material-symbols-outlined">smart_toy</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">ViralEngine</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-9">
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">Features</a>
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">Pricing</a>
+<a class="text-slate-300 hover:text-white text-sm font-medium transition-colors" href="#">Resources</a>
+</div>
+<div class="flex gap-3">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-transparent border border-border-dark text-white hover:bg-white/5 transition-colors text-sm font-bold">
+<span>Login</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-background-dark text-sm font-bold shadow-[0_0_15px_rgba(37,175,244,0.3)]">
+<span>Get Started</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu Icon (Placeholder for responsive design) -->
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative flex flex-col justify-center overflow-hidden pt-10 pb-16 lg:pt-20 lg:pb-32">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<div class="@container">
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+<!-- Left Content -->
+<div class="flex flex-col gap-6 lg:w-1/2 lg:pr-10">
+<div class="flex flex-col gap-4 text-left">
+<div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>AI-Powered Content Intelligence</span>
+</div>
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl lg:text-6xl">
+                                    Turn One Video into a <span class="text-primary">Viral Ecosystem</span>.
+                                </h1>
+<h2 class="text-slate-400 text-lg font-normal leading-relaxed max-w-[600px]">
+                                    The intelligence engine that analyzes, tags, summarizes, and repurposes your content for maximum reach across every platform.
+                                </h2>
+</div>
+<div class="flex flex-wrap gap-3 pt-2">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold transition-all hover:bg-primary/90 hover:scale-105 shadow-[0_0_20px_rgba(37,175,244,0.4)]">
+<span class="truncate">Start Analyzing for Free</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-surface-dark border border-border-dark text-white text-base font-bold transition-all hover:bg-border-dark">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+<span class="truncate">Watch Demo</span>
+</span>
+</button>
+</div>
+<p class="text-xs text-slate-500 mt-2">No credit card required · 14-day free trial</p>
+</div>
+<!-- Right Image -->
+<div class="lg:w-1/2 w-full mt-8 lg:mt-0 relative group">
+<!-- Glow effect behind image -->
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-full bg-surface-dark aspect-video rounded-xl border border-border-dark overflow-hidden shadow-2xl bg-cover bg-center" data-alt="Dashboard interface showing video analytics charts and repurposing tools" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3cMbjsPB2nOfDo-vQBZXqEn2QRDtJCjcy-bkD0cBImDd2AxjLxJMCSt4FtvH4KWZBdCeP78USuWh695hMRYyB-XFBTnLbOZ_IVh0yOk7OGChROK_nSlxwiTFZXyExDj4lmoufjtUJSTrn7yg_JlXvM2ODp_3Oxj-FEJs0jLkwC84raD373txdrVF3C4EUQiRiSkvko9wcPkm3tvmvG-NeMz5mPJhkm0gHmYB30J-O76c4_owq1ogQSm6xzaYYAm982p60UpoPDnTc");'>
+<!-- Overlay to make text legible if needed, or just dark tint -->
+<div class="absolute inset-0 bg-background-dark/30"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Trusted By -->
+<section class="border-y border-border-dark bg-surface-dark/30 py-10">
+<div class="px-4 md:px-10 lg:px-40 flex justify-center">
+<div class="max-w-[1280px] w-full flex flex-col items-center">
+<p class="text-slate-400 text-sm font-bold uppercase tracking-widest text-center mb-8">Trusted by 2,000+ top creators &amp; brands</p>
+<!-- Logo Grid (Simulated with text/icons for demo purposes since we don't have SVGs) -->
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Replace these with actual logos in production -->
+<div class="flex items-center gap-2 text-white font-bold text-xl"><span class="material-symbols-outlined text-red-500">play_arrow</span>YouTube</div>
+<div class="flex items-center gap-2 text-white font-bold text-xl"><span class="material-symbols-outlined text-pink-500">photo_camera</span>Instagram</div>
+<div class="flex items-center gap-2 text-white font-bold text-xl"><span class="material-symbols-outlined text-blue-400">flutter_dash</span>Twitter</div>
+<div class="flex items-center gap-2 text-white font-bold text-xl"><span class="material-symbols-outlined text-white">music_note</span>TikTok</div>
+<div class="flex items-center gap-2 text-white font-bold text-xl"><span class="material-symbols-outlined text-indigo-500">videocam</span>Twitch</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Custom Section) -->
+<section class="py-20 bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background-dark to-background-dark pointer-events-none"></div>
+<div class="px-4 md:px-10 lg:px-40 flex justify-center relative z-10">
+<div class="max-w-[1280px] w-full flex flex-col items-center gap-12">
+<div class="text-center max-w-2xl">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">From Raw Footage to Viral Gold</h2>
+<p class="text-slate-400">Simply upload your video link, and let our AI engine handle the rest.</p>
+</div>
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">upload_file</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">1. Upload Video</h3>
+<p class="text-slate-400 text-sm">Paste a YouTube link or upload raw footage directly.</p>
+</div>
+<!-- Arrow (Hidden on mobile) -->
+<div class="hidden md:flex justify-center text-slate-600">
+<span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors relative">
+<div class="absolute -top-3 right-6 bg-primary text-background-dark text-xs font-bold px-2 py-1 rounded">AI MAGIC</div>
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">2. Analyze &amp; Process</h3>
+<p class="text-slate-400 text-sm">Our engine tags, clips, and identifies viral moments.</p>
+</div>
+<!-- Arrow (Hidden on mobile) -->
+<div class="hidden md:flex justify-center text-slate-600">
+<span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl border border-border-dark bg-surface-dark hover:border-primary/50 transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">3. Publish Everywhere</h3>
+<p class="text-slate-400 text-sm">Export optimized shorts, tweets, and blogs instantly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-20 bg-surface-dark/30">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h2 class="text-white tracking-light text-3xl md:text-4xl font-bold leading-tight">
+                            The 4 Pillars of Viral Growth
+                        </h2>
+<p class="text-slate-400 text-base font-normal leading-normal max-w-[720px]">
+                            Everything you need to dominate the algorithm in one platform. No more switching between five different tools.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="group flex flex-1 gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 flex-col hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold leading-tight">Deep Analysis</h3>
+<p class="text-slate-400 text-sm font-normal leading-relaxed">
+                                    Unlock retention metrics, sentiment analysis, and audience drop-off points.
+                                </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="group flex flex-1 gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 flex-col hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">tag</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold leading-tight">Smart Tagging</h3>
+<p class="text-slate-400 text-sm font-normal leading-relaxed">
+                                    Auto-generate high-ranking SEO tags and keywords for every platform.
+                                </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="group flex flex-1 gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 flex-col hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold leading-tight">AI Summaries</h3>
+<p class="text-slate-400 text-sm font-normal leading-relaxed">
+                                    Get TL;DRs, key takeaways, and timestamped chapters in seconds.
+                                </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="group flex flex-1 gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 flex-col hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined text-2xl">autorenew</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold leading-tight">Instant Repurposing</h3>
+<p class="text-slate-400 text-sm font-normal leading-relaxed">
+                                    Convert long-form to Shorts, Reels, TikToks, and Blog posts instantly.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Grid of Outputs (Visual Example) -->
+<section class="py-20 bg-background-dark">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<div class="flex flex-col items-center mb-10 text-center">
+<h2 class="text-white text-3xl font-bold mb-4">Generate content for every channel</h2>
+<p class="text-slate-400">One input. Infinite outputs.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Grid Item 1 -->
+<div class="relative group rounded-xl overflow-hidden aspect-[9/16] bg-surface-dark border border-border-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Vertical video format ideal for TikTok or Reels" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVbQ2u9KNxODFqECn4ixppNtnyTpQ4V77Fi7BWqmXf3eyiZrX9JBEFhd-ovly-app9DPAGFG2tFQaUD7rPmBUblY-RAIqhtzCu6ziXLO7NoOls3vS-2ii7AyxH5xKMEJJugnWC6ZqQEzDtFycwbekS55JRn2MOF1h0NbheZ0Oj5Q4hx3XXMESbhukuN8EhSGOpQlfzCxjpjOV6tFCpz7xaXJS37K2m7aCstJasnx-Np52eSE7E9G_ZRoxANJ0h6zy5qeKEBTZYp4UO");'></div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+<span class="material-symbols-outlined text-white mb-1">music_note</span>
+<p class="text-white text-sm font-bold">TikTok</p>
+</div>
+</div>
+<!-- Grid Item 2 -->
+<div class="relative group rounded-xl overflow-hidden aspect-[9/16] bg-surface-dark border border-border-dark">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Instagram story style format" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBteg7f8evK2lCYBWBzO2laq401r_fBqc1fAek2tAnG7cExMehdIQE3XekU8OMUzwqX8z7mHo_k-ttZZzbZzIsvWsfuQ37Qdxts-CF37GZi25u7t4yI3CqXK83Eh5colBx05ZxCO3F0P5MtX41SD2ZWpbQ_zOao8moklTzi0T4UITsIiWEkZgAJHYc4zUx08JLFRDL69D8uynYdAlk7rsctc1nY2p8dHLibMtMSSMChD-qznMQWMEn0NCR8nhD67hEPbgzxp-0L5I0e");'></div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+<span class="material-symbols-outlined text-white mb-1">photo_camera</span>
+<p class="text-white text-sm font-bold">Reels</p>
+</div>
+</div>
+<!-- Grid Item 3 -->
+<div class="relative group rounded-xl overflow-hidden aspect-[9/16] md:aspect-square bg-surface-dark border border-border-dark md:col-span-2">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Professional dashboard or blog post editor view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApv_hYd0tl_7QYavmaS3Dl1phgrvViIXB29WIeV5STUwpBjw-2Yp534pH8y39XVmdtxN1GMmR5f3MzZReMj_CPf23t10ADquRkTiWVBeDewCM8ZMnoiah8P20j6xewdvG4lMsZzdiy0QHLKtVgV1P3T-SXv_soVTMliHfUWlGO9mF7wndrENZAVy1k0xxLSCjAwFmDXhVQV6qMJwGQbnzBx4HmXRcz0Yd0YNE4LHtXYQGnR8DA_6GT6GlfqVNCZz8T1FmJQH5FkJ85");'></div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+<span class="material-symbols-outlined text-white mb-1">article</span>
+<p class="text-white text-sm font-bold">Blog &amp; LinkedIn</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer CTA -->
+<footer class="border-t border-border-dark bg-surface-dark pt-16 pb-12">
+<div class="px-4 md:px-10 lg:px-40 flex justify-center">
+<div class="max-w-[800px] w-full flex flex-col items-center text-center">
+<h2 class="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight">Ready to go viral?</h2>
+<p class="text-slate-400 text-lg mb-8 max-w-xl">
+                    Join thousands of creators who are scaling their content output by 10x without hiring a team.
+                </p>
+<form class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+<input class="flex-1 rounded-lg bg-background-dark border border-border-dark px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-slate-600" placeholder="Enter your email address" type="email"/>
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 px-6 rounded-lg transition-colors shadow-[0_0_15px_rgba(37,175,244,0.3)]" type="button">
+                        Get Started
+                    </button>
+</form>
+<div class="mt-16 pt-8 border-t border-border-dark w-full flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+<p>© 2023 ViralEngine. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

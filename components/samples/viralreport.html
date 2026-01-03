@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Viral Analysis Report</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@300..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25aff4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                        "surface-dark": "#182b34",
+                        "surface-dark-highlight": "#223c49",
+                        "text-secondary": "#90b7cb"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-[#223c49] bg-white dark:bg-[#101d23] px-10 py-3">
+<div class="flex items-center gap-4 dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">ViralAnalyze</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9 hidden md:flex">
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">New Analysis</a>
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Saved Reports</a>
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Settings</a>
+</nav>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-gray-100 dark:ring-[#223c49]" data-alt="User profile avatar showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqLDt5X_X-J0zwGQ5sD2l9EMKJiYCwNo96pVif2lAAjfI6uZJ4SnnuA4WJz_WFMeQBMtImQ0r87lM1-kb2dE3zMHpIpd6Ky-C_RKEP-t7KUI3aFW04LM515fLVlmXxgiwYpAaUKMy8m_Ebxvx7mTG5HCt0Zs_1bF3jcGkWAfnRwShdoa1Z2KAuZ_0XII7SaJvCDVSHzXFAWIW89eUpq2GVIt3rIAcz9uZTC2QcKe1WwPQIptEYECwQzc62FWPfPAeE0B_QFBwprLFK");'></div>
+</div>
+</header>
+<div class="flex flex-1 justify-center py-5 px-4 md:px-10 lg:px-20 xl:px-40">
+<div class="flex flex-col max-w-[1200px] flex-1 gap-6">
+<!-- Page Heading & Actions -->
+<div class="flex flex-wrap items-center justify-between gap-4 p-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Viral Analysis Report</h1>
+<p class="text-slate-500 dark:text-text-secondary text-base font-normal">Performance breakdown for <span class="font-bold text-slate-700 dark:text-white">'How to Scale in 2024'</span></p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-gray-200 dark:bg-surface-dark-highlight hover:bg-gray-300 dark:hover:bg-[#2e4e5e] text-slate-900 dark:text-white text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+<span class="truncate">Share</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors shadow-[0_0_15px_rgba(37,175,244,0.3)]">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="truncate">Export PDF</span>
+</button>
+</div>
+</div>
+<!-- Top Section: Video & Score -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-4 pt-0">
+<!-- Video Card -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="flex flex-col md:flex-row items-stretch gap-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-none h-full">
+<div class="relative w-full md:w-64 aspect-video md:aspect-auto rounded-lg overflow-hidden flex-shrink-0 group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Video thumbnail showing a person presenting a chart" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0fNHXQBUxIk4m9dQaZXQr0qPHNW4PC8yiquuhGTLnWYXJ8dj-9a6x7osVr43oeLZqCBkETEb8XHliMhsDhYiFBmmPtmIOl93FzmFhRsvrP9DFNQlNECjHNZsqkjvILkaC13z0PJqiesg0H-utAQQWa-uyrTTsczOiMfu3sTzXwDgdV0ovdtZaH6vFmYG93xwSbxFZk7i97rYx6TGXB9MS6aUykdz3X_0WsUlvb6--b2GQ9m172OSQkSS5zXrh-bY3bcAYslqwFGUh");'></div>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+<div class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">0:58</div>
+</div>
+<div class="flex flex-col justify-between flex-1 gap-4">
+<div>
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight mb-2">How to Scale in 2024</h3>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-dark-highlight rounded text-xs text-slate-600 dark:text-text-secondary font-medium">Education</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-dark-highlight rounded text-xs text-slate-600 dark:text-text-secondary font-medium">Business</span>
+</div>
+<p class="text-slate-500 dark:text-text-secondary text-sm">Uploaded: Oct 24 • Views: 12.4K • Shares: 842</p>
+</div>
+<div class="flex gap-2 mt-auto">
+<button class="flex-1 flex items-center justify-center gap-2 rounded-lg h-9 px-3 bg-gray-100 dark:bg-surface-dark-highlight text-slate-700 dark:text-white text-sm font-medium hover:bg-gray-200 dark:hover:bg-[#2e4e5e] transition-colors">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+                                    Re-Analyze
+                                </button>
+<button class="flex-1 flex items-center justify-center gap-2 rounded-lg h-9 px-3 bg-gray-100 dark:bg-surface-dark-highlight text-slate-700 dark:text-white text-sm font-medium hover:bg-gray-200 dark:hover:bg-[#2e4e5e] transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+                                    Copy Script
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Cards -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="col-span-2 md:col-span-1 lg:col-span-1 flex flex-col justify-between rounded-xl p-6 bg-gradient-to-br from-primary/20 to-surface-dark dark:to-[#16262e] border border-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+<div class="flex items-start justify-between">
+<p class="text-slate-700 dark:text-white text-sm font-medium leading-normal opacity-80">Virality Score</p>
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight mt-2">92<span class="text-lg text-slate-500 dark:text-text-secondary font-normal">/100</span></p>
+<div class="w-full bg-gray-200 dark:bg-surface-dark-highlight h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+</div>
+<p class="text-xs text-primary mt-2 font-medium">Top 5% of your niche</p>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1 lg:col-span-1 flex flex-col justify-between rounded-xl p-6 bg-white dark:bg-surface-dark border border-gray-100 dark:border-none">
+<div class="flex items-start justify-between">
+<p class="text-slate-700 dark:text-white text-sm font-medium leading-normal opacity-80">Performance Grade</p>
+<span class="material-symbols-outlined text-yellow-400">workspace_premium</span>
+</div>
+<div>
+<p class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 text-4xl font-black leading-tight mt-2">S-Tier</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs mt-3 leading-snug">Exceptional retention and engagement predicted.</p>
+</div>
+</div>
+<div class="col-span-2 flex items-center justify-between rounded-xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-none">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-green-500/10 rounded-lg">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold">Platform Optimized</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs">Perfect for TikTok &amp; Reels</p>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-gray-200 dark:bg-surface-dark-highlight mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="p-2 bg-blue-500/10 rounded-lg">
+<span class="material-symbols-outlined text-blue-500">timer</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold">Pacing</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs">Fast &amp; Dynamic</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Insight Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+<!-- Viral Hook Card -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-none shadow-sm overflow-hidden h-full">
+<div class="p-4 border-b border-gray-100 dark:border-surface-dark-highlight flex justify-between items-center bg-gray-50/50 dark:bg-transparent">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">phishing</span>
+<h3 class="text-slate-900 dark:text-white font-bold text-base">The Viral Hook</h3>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold bg-green-500/20 text-green-500 tracking-wider">High Retention</span>
+</div>
+<div class="p-5 flex flex-col gap-4 flex-1">
+<div class="relative pl-4 border-l-2 border-primary">
+<span class="absolute -left-1.5 -top-1 size-3 bg-primary rounded-full"></span>
+<p class="text-slate-700 dark:text-gray-200 text-lg font-medium italic">"Stop doing [X] if you want [Y]..."</p>
+</div>
+<p class="text-slate-500 dark:text-text-secondary text-sm leading-relaxed">
+                            This negative framing immediately creates a curiosity gap. Viewers feel a need to verify if they are making the mistake mentioned.
+                        </p>
+<div class="mt-auto pt-2">
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 dark:bg-surface-dark-highlight text-slate-800 dark:text-white">
+                                    Format: Contrarian
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Emotional Triggers Card -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-none shadow-sm overflow-hidden h-full">
+<div class="p-4 border-b border-gray-100 dark:border-surface-dark-highlight flex justify-between items-center bg-gray-50/50 dark:bg-transparent">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-pink-500 text-xl">sentiment_satisfied</span>
+<h3 class="text-slate-900 dark:text-white font-bold text-base">Emotional Triggers</h3>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4 flex-1">
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-gray-50 dark:bg-surface-dark-highlight/50 p-3 rounded-lg flex flex-col items-center justify-center gap-1 text-center">
+<span class="text-2xl">😲</span>
+<span class="text-slate-900 dark:text-white font-bold text-sm">Curiosity</span>
+<span class="text-[10px] text-slate-500 dark:text-text-secondary">High Impact</span>
+</div>
+<div class="bg-gray-50 dark:bg-surface-dark-highlight/50 p-3 rounded-lg flex flex-col items-center justify-center gap-1 text-center">
+<span class="text-2xl">⏳</span>
+<span class="text-slate-900 dark:text-white font-bold text-sm">FOMO</span>
+<span class="text-[10px] text-slate-500 dark:text-text-secondary">Med Impact</span>
+</div>
+<div class="bg-gray-50 dark:bg-surface-dark-highlight/50 p-3 rounded-lg flex flex-col items-center justify-center gap-1 text-center col-span-2">
+<span class="text-2xl">✅</span>
+<span class="text-slate-900 dark:text-white font-bold text-sm">Validation</span>
+<span class="text-[10px] text-slate-500 dark:text-text-secondary">Confirming audience bias</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pain Point Card -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-none shadow-sm overflow-hidden h-full">
+<div class="p-4 border-b border-gray-100 dark:border-surface-dark-highlight flex justify-between items-center bg-gray-50/50 dark:bg-transparent">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500 text-xl">warning</span>
+<h3 class="text-slate-900 dark:text-white font-bold text-base">Target Pain Point</h3>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4 flex-1">
+<div class="bg-red-500/10 p-4 rounded-lg border border-red-500/20">
+<p class="text-red-600 dark:text-red-400 font-bold text-sm mb-1">Core Frustration</p>
+<p class="text-slate-800 dark:text-white font-medium">"Working hard but seeing zero growth or engagement."</p>
+</div>
+<div class="space-y-3">
+<div>
+<p class="text-xs text-slate-500 dark:text-text-secondary uppercase font-bold tracking-wider mb-2">Solution Offered</p>
+<p class="text-sm text-slate-700 dark:text-gray-200">A simplified 3-step framework to unclog the growth bottleneck without working more hours.</p>
+</div>
+</div>
+<button class="mt-auto w-full py-2 flex items-center justify-center gap-2 text-primary text-sm font-bold hover:bg-primary/10 rounded transition-colors">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+                             Copy Insight
+                         </button>
+</div>
+</div>
+</div>
+<!-- Structure Breakdown & Platform Advice -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 pb-8">
+<!-- Timeline Structure (Spans 2 cols) -->
+<div class="lg:col-span-2 rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-none shadow-sm p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-slate-900 dark:text-white font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500">view_timeline</span>
+                            Structure Breakdown
+                        </h3>
+<span class="text-xs text-slate-500 bg-gray-100 dark:bg-surface-dark-highlight px-2 py-1 rounded">Talking Head Format</span>
+</div>
+<!-- Timeline Visualization -->
+<div class="relative py-4">
+<!-- Line -->
+<div class="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 dark:bg-surface-dark-highlight -translate-y-1/2 rounded-full z-0"></div>
+<!-- Points -->
+<div class="relative z-10 flex justify-between">
+<!-- Step 1 -->
+<div class="flex flex-col items-center group cursor-pointer w-1/4">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-surface-dark shadow-lg mb-4 group-hover:scale-125 transition-transform"></div>
+<div class="text-center">
+<p class="text-xs font-bold text-primary mb-1">0:00 - 0:03</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">The Hook</p>
+<p class="text-xs text-slate-500 dark:text-text-secondary mt-1 hidden md:block">Negative Framing</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center group cursor-pointer w-1/4">
+<div class="w-4 h-4 rounded-full bg-gray-400 dark:bg-slate-600 border-4 border-white dark:border-surface-dark shadow-lg mb-4 group-hover:bg-primary group-hover:scale-125 transition-all"></div>
+<div class="text-center">
+<p class="text-xs font-bold text-slate-500 mb-1">0:03 - 0:15</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">The Setup</p>
+<p class="text-xs text-slate-500 dark:text-text-secondary mt-1 hidden md:block">Define Problem</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center group cursor-pointer w-1/4">
+<div class="w-4 h-4 rounded-full bg-gray-400 dark:bg-slate-600 border-4 border-white dark:border-surface-dark shadow-lg mb-4 group-hover:bg-primary group-hover:scale-125 transition-all"></div>
+<div class="text-center">
+<p class="text-xs font-bold text-slate-500 mb-1">0:15 - 0:45</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Value/Climax</p>
+<p class="text-xs text-slate-500 dark:text-text-secondary mt-1 hidden md:block">3-Step Solution</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center group cursor-pointer w-1/4">
+<div class="w-4 h-4 rounded-full bg-gray-400 dark:bg-slate-600 border-4 border-white dark:border-surface-dark shadow-lg mb-4 group-hover:bg-primary group-hover:scale-125 transition-all"></div>
+<div class="text-center">
+<p class="text-xs font-bold text-slate-500 mb-1">0:45 - 0:58</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">CTA</p>
+<p class="text-xs text-slate-500 dark:text-text-secondary mt-1 hidden md:block">Comment "Scale"</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Platform Advantage -->
+<div class="flex flex-col rounded-xl bg-gradient-to-br from-[#101d23] to-[#182b34] border border-gray-200 dark:border-surface-dark-highlight shadow-sm p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-white">campaign</span>
+</div>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg mb-4 flex items-center gap-2 relative z-10">
+                        Platform Advantage
+                    </h3>
+<div class="space-y-4 relative z-10">
+<div class="flex items-start gap-3">
+<div class="size-8 rounded-full bg-black/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-sm">youtube_trending</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-medium text-sm">TikTok / Reels</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs mt-1">Vertical format + fast cuts optimize for algorithmic retention spikes.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="size-8 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-blue-500 text-sm">work</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-medium text-sm">LinkedIn</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs mt-1">Professional tone of "Scaling" fits B2B, but requires a text-heavy caption overlay.</p>
+</div>
+</div>
+</div>
+<button class="mt-auto pt-4 w-full text-center text-primary text-sm font-bold hover:underline">View detailed platform report</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
