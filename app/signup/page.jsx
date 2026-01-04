@@ -6,10 +6,10 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 
 const features = [
-  { icon: "analytics", text: "AI-powered viral score predictions" },
-  { icon: "tag", text: "Smart tagging for maximum reach" },
-  { icon: "autorenew", text: "One-click content repurposing" },
-  { icon: "trending_up", text: "Real-time trend detection" },
+  { icon: "school", text: "Structured learning paths" },
+  { icon: "build", text: "Real tool access" },
+  { icon: "workspace_premium", text: "Industry certifications" },
+  { icon: "work", text: "Job-ready skills" },
 ]
 
 export default function SignUpPage() {
@@ -126,27 +126,27 @@ export default function SignUpPage() {
   const passwordStrength = formData.password.length >= 12 ? "strong" : formData.password.length >= 8 ? "medium" : "weak"
 
   return (
-    <main className="w-full min-h-screen bg-[#101c22] flex">
+    <main className="w-full min-h-screen bg-neutral-200 flex">
       {/* Left Side - Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12 overflow-y-auto">
         <div className="w-full max-w-md py-8">
           {/* Mobile Logo */}
           <div className="lg:hidden flex justify-center mb-8">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex items-center justify-center rounded-lg bg-primary/20 p-2.5 text-primary">
-                <span className="material-symbols-outlined text-2xl">smart_toy</span>
+              <div className="flex items-center justify-center rounded-lg bg-black/10 p-2.5">
+                <span className="material-symbols-outlined text-2xl text-black">school</span>
               </div>
-              <span className="text-xl font-bold text-white">ViralEngine</span>
+              <span className="text-xl font-bold text-black">Media.LeadsKe.Pro</span>
             </Link>
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-black text-white mb-2">Start for free</h2>
-            <p className="text-slate-400">Create your account and go viral</p>
+            <h2 className="text-3xl font-bold text-black mb-2">Start learning free</h2>
+            <p className="text-neutral-500">Create your account to begin your journey</p>
           </div>
 
           {generalError && (
-            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm flex items-center gap-3">
+            <div className="mb-6 p-4 bg-red-100 border border-red-300 rounded-lg text-red-600 text-sm flex items-center gap-3">
               <span className="material-symbols-outlined">error</span>
               {generalError}
             </div>
@@ -157,7 +157,7 @@ export default function SignUpPage() {
             type="button"
             onClick={handleGoogleSignIn}
             disabled={isLoading}
-            className="w-full py-3.5 bg-[#182b34] border border-[#223c49] text-white font-medium rounded-lg hover:bg-[#1a3340] transition-colors flex items-center justify-center gap-3 disabled:opacity-50 mb-6"
+            className="w-full py-3.5 bg-neutral-300 border border-neutral-400 text-black font-medium rounded-lg hover:bg-neutral-400 transition-colors flex items-center justify-center gap-3 disabled:opacity-50 mb-6"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -182,21 +182,21 @@ export default function SignUpPage() {
 
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-[#223c49]" />
+              <div className="w-full border-t border-neutral-400" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-[#101c22] text-slate-500">or sign up with email</span>
+              <span className="px-4 bg-neutral-200 text-neutral-500">or sign up with email</span>
             </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Full Name */}
             <div>
-              <label htmlFor="fullName" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="fullName" className="block text-sm font-medium text-neutral-700 mb-2">
                 Full Name
               </label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
                   <span className="material-symbols-outlined text-xl">person</span>
                 </span>
                 <input
@@ -206,15 +206,15 @@ export default function SignUpPage() {
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className={`w-full pl-12 pr-4 py-3.5 rounded-lg border bg-[#182b34] text-white placeholder-slate-500 transition-colors focus:outline-none ${
+                  className={`w-full pl-12 pr-4 py-3.5 rounded-lg border bg-neutral-100 text-black placeholder-neutral-500 transition-colors focus:outline-none ${
                     errors.fullName
                       ? "border-red-500 focus:border-red-500"
-                      : "border-[#223c49] focus:border-primary focus:ring-1 focus:ring-primary"
+                      : "border-neutral-400 focus:border-black focus:ring-1 focus:ring-black"
                   }`}
                 />
               </div>
               {errors.fullName && (
-                <p className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-red-500 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">error</span>
                   {errors.fullName}
                 </p>
@@ -223,11 +223,11 @@ export default function SignUpPage() {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
                 Email Address
               </label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
                   <span className="material-symbols-outlined text-xl">mail</span>
                 </span>
                 <input
@@ -237,15 +237,15 @@ export default function SignUpPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className={`w-full pl-12 pr-4 py-3.5 rounded-lg border bg-[#182b34] text-white placeholder-slate-500 transition-colors focus:outline-none ${
+                  className={`w-full pl-12 pr-4 py-3.5 rounded-lg border bg-neutral-100 text-black placeholder-neutral-500 transition-colors focus:outline-none ${
                     errors.email
                       ? "border-red-500 focus:border-red-500"
-                      : "border-[#223c49] focus:border-primary focus:ring-1 focus:ring-primary"
+                      : "border-neutral-400 focus:border-black focus:ring-1 focus:ring-black"
                   }`}
                 />
               </div>
               {errors.email && (
-                <p className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-red-500 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">error</span>
                   {errors.email}
                 </p>
@@ -254,11 +254,11 @@ export default function SignUpPage() {
 
             {/* Password */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-neutral-700 mb-2">
                 Password
               </label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
                   <span className="material-symbols-outlined text-xl">lock</span>
                 </span>
                 <input
@@ -268,16 +268,16 @@ export default function SignUpPage() {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Create a strong password"
-                  className={`w-full pl-12 pr-12 py-3.5 rounded-lg border bg-[#182b34] text-white placeholder-slate-500 transition-colors focus:outline-none ${
+                  className={`w-full pl-12 pr-12 py-3.5 rounded-lg border bg-neutral-100 text-black placeholder-neutral-500 transition-colors focus:outline-none ${
                     errors.password
                       ? "border-red-500 focus:border-red-500"
-                      : "border-[#223c49] focus:border-primary focus:ring-1 focus:ring-primary"
+                      : "border-neutral-400 focus:border-black focus:ring-1 focus:ring-black"
                   }`}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-700 transition-colors"
                 >
                   <span className="material-symbols-outlined text-xl">
                     {showPassword ? "visibility_off" : "visibility"}
@@ -286,7 +286,7 @@ export default function SignUpPage() {
               </div>
               {formData.password && !errors.password && (
                 <div className="mt-2 flex items-center gap-3">
-                  <div className="flex-1 h-1.5 bg-[#223c49] rounded-full overflow-hidden">
+                  <div className="flex-1 h-1.5 bg-neutral-300 rounded-full overflow-hidden">
                     <div
                       className={`h-full transition-all ${
                         passwordStrength === "strong"
@@ -299,17 +299,17 @@ export default function SignUpPage() {
                   </div>
                   <span className={`text-xs font-medium ${
                     passwordStrength === "strong"
-                      ? "text-green-400"
+                      ? "text-green-600"
                       : passwordStrength === "medium"
-                      ? "text-yellow-400"
-                      : "text-red-400"
+                      ? "text-yellow-600"
+                      : "text-red-500"
                   }`}>
                     {passwordStrength === "strong" ? "Strong" : passwordStrength === "medium" ? "Good" : "Weak"}
                   </span>
                 </div>
               )}
               {errors.password && (
-                <p className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-red-500 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">error</span>
                   {errors.password}
                 </p>
@@ -318,11 +318,11 @@ export default function SignUpPage() {
 
             {/* Confirm Password */}
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-neutral-700 mb-2">
                 Confirm Password
               </label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
                   <span className="material-symbols-outlined text-xl">lock</span>
                 </span>
                 <input
@@ -332,16 +332,16 @@ export default function SignUpPage() {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm your password"
-                  className={`w-full pl-12 pr-12 py-3.5 rounded-lg border bg-[#182b34] text-white placeholder-slate-500 transition-colors focus:outline-none ${
+                  className={`w-full pl-12 pr-12 py-3.5 rounded-lg border bg-neutral-100 text-black placeholder-neutral-500 transition-colors focus:outline-none ${
                     errors.confirmPassword
                       ? "border-red-500 focus:border-red-500"
-                      : "border-[#223c49] focus:border-primary focus:ring-1 focus:ring-primary"
+                      : "border-neutral-400 focus:border-black focus:ring-1 focus:ring-black"
                   }`}
                 />
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-700 transition-colors"
                 >
                   <span className="material-symbols-outlined text-xl">
                     {showConfirmPassword ? "visibility_off" : "visibility"}
@@ -349,13 +349,13 @@ export default function SignUpPage() {
                 </button>
               </div>
               {formData.confirmPassword && formData.password === formData.confirmPassword && !errors.confirmPassword && (
-                <p className="text-green-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-green-600 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">check_circle</span>
                   Passwords match
                 </p>
               )}
               {errors.confirmPassword && (
-                <p className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-red-500 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">error</span>
                   {errors.confirmPassword}
                 </p>
@@ -372,21 +372,21 @@ export default function SignUpPage() {
                   setAgreeTerms(e.target.checked)
                   if (errors.terms) setErrors((prev) => ({ ...prev, terms: "" }))
                 }}
-                className="w-5 h-5 mt-0.5 rounded border-[#223c49] bg-[#182b34] text-primary focus:ring-primary focus:ring-offset-0"
+                className="w-5 h-5 mt-0.5 rounded border-neutral-400 bg-neutral-100 text-black focus:ring-black focus:ring-offset-0"
               />
-              <label htmlFor="terms" className="text-sm text-slate-400">
+              <label htmlFor="terms" className="text-sm text-neutral-600">
                 I agree to the{" "}
-                <Link href="/terms" className="text-primary hover:text-primary/80 font-medium transition-colors">
+                <Link href="/terms" className="text-black hover:text-neutral-700 font-medium transition-colors">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="text-primary hover:text-primary/80 font-medium transition-colors">
+                <Link href="/privacy" className="text-black hover:text-neutral-700 font-medium transition-colors">
                   Privacy Policy
                 </Link>
               </label>
             </div>
             {errors.terms && (
-              <p className="text-red-400 text-sm flex items-center gap-1">
+              <p className="text-red-500 text-sm flex items-center gap-1">
                 <span className="material-symbols-outlined text-sm">error</span>
                 {errors.terms}
               </p>
@@ -395,7 +395,7 @@ export default function SignUpPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3.5 bg-primary text-[#101c22] font-bold rounded-lg hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(37,175,244,0.3)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-6"
+              className="w-full py-3.5 bg-black text-white font-bold rounded-lg hover:bg-neutral-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-6"
             >
               {isLoading ? (
                 <>
@@ -411,9 +411,9 @@ export default function SignUpPage() {
             </button>
           </form>
 
-          <p className="text-center text-slate-400 text-sm mt-6">
+          <p className="text-center text-neutral-500 text-sm mt-6">
             Already have an account?{" "}
-            <Link href="/login" className="text-primary font-bold hover:text-primary/80 transition-colors">
+            <Link href="/login" className="text-black font-bold hover:text-neutral-700 transition-colors">
               Sign in
             </Link>
           </p>
@@ -421,80 +421,69 @@ export default function SignUpPage() {
       </div>
 
       {/* Right Side - Image/Hero */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuBteg7f8evK2lCYBWBzO2laq401r_fBqc1fAek2tAnG7cExMehdIQE3XekU8OMUzwqX8z7mHo_k-ttZZzbZzIsvWsfuQ37Qdxts-CF37GZi25u7t4yI3CqXK83Eh5colBx05ZxCO3F0P5MtX41SD2ZWpbQ_zOao8moklTzi0T4UITsIiWEkZgAJHYc4zUx08JLFRDL69D8uynYdAlk7rsctc1nY2p8dHLibMtMSSMChD-qznMQWMEn0NCR8nhD67hEPbgzxp-0L5I0e")`,
-          }}
-        ></div>
-
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-bl from-[#101c22]/90 via-[#101c22]/70 to-primary/30"></div>
-
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-neutral-300">
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-between p-12 w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex items-center justify-center rounded-lg bg-primary/20 p-2.5 text-primary">
-              <span className="material-symbols-outlined text-2xl">smart_toy</span>
+            <div className="flex items-center justify-center rounded-lg bg-black/10 p-2.5">
+              <span className="material-symbols-outlined text-2xl text-black">school</span>
             </div>
-            <span className="text-xl font-bold text-white">ViralEngine</span>
+            <span className="text-xl font-bold text-black">Media.LeadsKe.Pro</span>
           </Link>
 
           {/* Main Content */}
           <div className="max-w-md">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary mb-6">
-              <span className="material-symbols-outlined text-[16px]">auto_awesome</span>
-              <span>14-Day Free Trial</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-neutral-500 bg-neutral-400/50 px-4 py-1.5 text-sm font-medium text-black mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-black"></span>
+              <span>Free to start</span>
             </div>
 
-            <h1 className="text-4xl font-black text-white mb-6 leading-tight">
-              Join 50,000+ creators going <span className="text-primary">viral</span>
+            <h1 className="text-4xl font-bold text-black mb-6 leading-tight">
+              Join professionals mastering digital skills
             </h1>
-            <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-              Start analyzing your content in minutes. No credit card required.
+            <p className="text-neutral-600 text-lg mb-8 leading-relaxed">
+              Get certified with hands-on training using real industry tools.
             </p>
 
             {/* Features */}
             <div className="space-y-4">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <div className="w-10 h-10 rounded-lg bg-black/5 flex items-center justify-center text-black">
                     <span className="material-symbols-outlined">{feature.icon}</span>
                   </div>
-                  <span className="text-slate-300">{feature.text}</span>
+                  <span className="text-neutral-700">{feature.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Social Proof */}
-          <div className="bg-[#182b34]/80 backdrop-blur-sm border border-[#223c49] rounded-xl p-6">
+          <div className="bg-neutral-200 border border-neutral-400 rounded-xl p-6">
             <div className="flex items-center gap-4 mb-4">
               {/* Avatar Stack */}
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-[#182b34] flex items-center justify-center text-white font-bold text-xs"
+                    className="w-10 h-10 rounded-full bg-black border-2 border-neutral-200 flex items-center justify-center text-white font-bold text-xs"
                   >
                     {String.fromCharCode(64 + i)}
                   </div>
                 ))}
               </div>
               <div>
-                <div className="flex items-center gap-1 text-yellow-400">
+                <div className="flex items-center gap-1 text-yellow-500">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <span key={i} className="material-symbols-outlined text-lg">star</span>
                   ))}
                 </div>
-                <p className="text-slate-400 text-sm">from 2,000+ reviews</p>
+                <p className="text-neutral-500 text-sm">from certified professionals</p>
               </div>
             </div>
-            <p className="text-white font-medium">
-              "The best investment I've made for my content strategy."
+            <p className="text-black font-medium">
+              "The best investment I've made for my career."
             </p>
           </div>
         </div>

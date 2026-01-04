@@ -73,68 +73,59 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="w-full min-h-screen bg-[#101c22] flex">
+    <main className="w-full min-h-screen bg-neutral-200 flex">
       {/* Left Side - Image/Hero */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuApv_hYd0tl_7QYavmaS3Dl1phgrvViIXB29WIeV5STUwpBjw-2Yp534pH8y39XVmdtxN1GMmR5f3MzZReMj_CPf23t10ADquRkTiWVBeDewCM8ZMnoiah8P20j6xewdvG4lMsZzdiy0QHLKtVgV1P3T-SXv_soVTMliHfUWlGO9mF7wndrENZAVy1k0xxLSCjAwFmDXhVQV6qMJwGQbnzBx4HmXRcz0Yd0YNE4LHtXYQGnR8DA_6GT6GlfqVNCZz8T1FmJQH5FkJ85")`,
-          }}
-        ></div>
-
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#101c22]/90 via-[#101c22]/70 to-primary/30"></div>
-
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-neutral-300">
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-between p-12 w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex items-center justify-center rounded-lg bg-primary/20 p-2.5 text-primary">
-              <span className="material-symbols-outlined text-2xl">smart_toy</span>
+            <div className="flex items-center justify-center rounded-lg bg-black/10 p-2.5">
+              <span className="material-symbols-outlined text-2xl text-black">school</span>
             </div>
-            <span className="text-xl font-bold text-white">ViralEngine</span>
+            <span className="text-xl font-bold text-black">Media.LeadsKe.Pro</span>
           </Link>
 
           {/* Main Content */}
           <div className="max-w-md">
-            <h1 className="text-4xl font-black text-white mb-6 leading-tight">
-              Turn your content into a <span className="text-primary">viral ecosystem</span>
+            <h1 className="text-4xl font-bold text-black mb-6 leading-tight">
+              Master digital skills.
+              <br />
+              <span className="text-neutral-500">Get certified.</span>
             </h1>
-            <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-              AI-powered analysis that helps you understand, optimize, and scale your content across every platform.
+            <p className="text-neutral-600 text-lg mb-8 leading-relaxed">
+              Professional training platform for Virtual Assistants, Social Media Managers, Digital Marketers, and Sales professionals.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div>
-                <div className="text-3xl font-black text-white">10M+</div>
-                <p className="text-slate-400 text-sm">Videos Analyzed</p>
+                <div className="text-3xl font-bold text-black">4</div>
+                <p className="text-neutral-500 text-sm">Career Tracks</p>
               </div>
               <div>
-                <div className="text-3xl font-black text-white">50K+</div>
-                <p className="text-slate-400 text-sm">Creators</p>
+                <div className="text-3xl font-bold text-black">20+</div>
+                <p className="text-neutral-500 text-sm">Modules</p>
               </div>
               <div>
-                <div className="text-3xl font-black text-white">87%</div>
-                <p className="text-slate-400 text-sm">Accuracy</p>
+                <div className="text-3xl font-bold text-black">Real</div>
+                <p className="text-neutral-500 text-sm">Tool Access</p>
               </div>
             </div>
           </div>
 
           {/* Testimonial */}
-          <div className="bg-[#182b34]/80 backdrop-blur-sm border border-[#223c49] rounded-xl p-6">
-            <p className="text-slate-300 italic mb-4">
-              "ViralEngine helped me 3x my views in just 2 months. The viral score predictions are incredibly accurate."
+          <div className="bg-neutral-200 border border-neutral-400 rounded-xl p-6">
+            <p className="text-neutral-600 italic mb-4">
+              "The practical labs made all the difference. I was job-ready within weeks of completing my certification."
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold">
-                JM
+              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold">
+                SM
               </div>
               <div>
-                <p className="text-white font-medium">Jake Morrison</p>
-                <p className="text-slate-400 text-sm">2.5M subscribers</p>
+                <p className="text-black font-medium">Sarah M.</p>
+                <p className="text-neutral-500 text-sm">Certified LeadsKe VA</p>
               </div>
             </div>
           </div>
@@ -147,20 +138,20 @@ export default function LoginPage() {
           {/* Mobile Logo */}
           <div className="lg:hidden flex justify-center mb-8">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex items-center justify-center rounded-lg bg-primary/20 p-2.5 text-primary">
-                <span className="material-symbols-outlined text-2xl">smart_toy</span>
+              <div className="flex items-center justify-center rounded-lg bg-black/10 p-2.5">
+                <span className="material-symbols-outlined text-2xl text-black">school</span>
               </div>
-              <span className="text-xl font-bold text-white">ViralEngine</span>
+              <span className="text-xl font-bold text-black">Media.LeadsKe.Pro</span>
             </Link>
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-black text-white mb-2">Welcome back</h2>
-            <p className="text-slate-400">Sign in to your account to continue</p>
+            <h2 className="text-3xl font-bold text-black mb-2">Welcome back</h2>
+            <p className="text-neutral-500">Sign in to continue your learning journey</p>
           </div>
 
           {generalError && (
-            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm flex items-center gap-3">
+            <div className="mb-6 p-4 bg-red-100 border border-red-300 rounded-lg text-red-600 text-sm flex items-center gap-3">
               <span className="material-symbols-outlined">error</span>
               {generalError}
             </div>
@@ -171,7 +162,7 @@ export default function LoginPage() {
             type="button"
             onClick={handleGoogleSignIn}
             disabled={isLoading}
-            className="w-full py-3.5 bg-[#182b34] border border-[#223c49] text-white font-medium rounded-lg hover:bg-[#1a3340] transition-colors flex items-center justify-center gap-3 disabled:opacity-50 mb-6"
+            className="w-full py-3.5 bg-neutral-300 border border-neutral-400 text-black font-medium rounded-lg hover:bg-neutral-400 transition-colors flex items-center justify-center gap-3 disabled:opacity-50 mb-6"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -196,20 +187,20 @@ export default function LoginPage() {
 
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-[#223c49]" />
+              <div className="w-full border-t border-neutral-400" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-[#101c22] text-slate-500">or sign in with email</span>
+              <span className="px-4 bg-neutral-200 text-neutral-500">or sign in with email</span>
             </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
                 Email Address
               </label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
                   <span className="material-symbols-outlined text-xl">mail</span>
                 </span>
                 <input
@@ -221,15 +212,15 @@ export default function LoginPage() {
                     if (errors.email) setErrors({ ...errors, email: "" })
                   }}
                   placeholder="you@example.com"
-                  className={`w-full pl-12 pr-4 py-3.5 rounded-lg border bg-[#182b34] text-white placeholder-slate-500 transition-colors focus:outline-none ${
+                  className={`w-full pl-12 pr-4 py-3.5 rounded-lg border bg-neutral-100 text-black placeholder-neutral-500 transition-colors focus:outline-none ${
                     errors.email
                       ? "border-red-500 focus:border-red-500"
-                      : "border-[#223c49] focus:border-primary focus:ring-1 focus:ring-primary"
+                      : "border-neutral-400 focus:border-black focus:ring-1 focus:ring-black"
                   }`}
                 />
               </div>
               {errors.email && (
-                <p className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-red-500 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">error</span>
                   {errors.email}
                 </p>
@@ -237,11 +228,11 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-neutral-700 mb-2">
                 Password
               </label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500">
                   <span className="material-symbols-outlined text-xl">lock</span>
                 </span>
                 <input
@@ -253,16 +244,16 @@ export default function LoginPage() {
                     if (errors.password) setErrors({ ...errors, password: "" })
                   }}
                   placeholder="Enter your password"
-                  className={`w-full pl-12 pr-12 py-3.5 rounded-lg border bg-[#182b34] text-white placeholder-slate-500 transition-colors focus:outline-none ${
+                  className={`w-full pl-12 pr-12 py-3.5 rounded-lg border bg-neutral-100 text-black placeholder-neutral-500 transition-colors focus:outline-none ${
                     errors.password
                       ? "border-red-500 focus:border-red-500"
-                      : "border-[#223c49] focus:border-primary focus:ring-1 focus:ring-primary"
+                      : "border-neutral-400 focus:border-black focus:ring-1 focus:ring-black"
                   }`}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-700 transition-colors"
                 >
                   <span className="material-symbols-outlined text-xl">
                     {showPassword ? "visibility_off" : "visibility"}
@@ -270,7 +261,7 @@ export default function LoginPage() {
                 </button>
               </div>
               {errors.password && (
-                <p className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                <p className="text-red-500 text-sm mt-2 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">error</span>
                   {errors.password}
                 </p>
@@ -281,11 +272,11 @@ export default function LoginPage() {
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
-                  className="w-4 h-4 rounded border-[#223c49] bg-[#182b34] text-primary focus:ring-primary focus:ring-offset-0"
+                  className="w-4 h-4 rounded border-neutral-400 bg-neutral-100 text-black focus:ring-black focus:ring-offset-0"
                 />
-                <span className="text-slate-400 text-sm">Remember me</span>
+                <span className="text-neutral-600 text-sm">Remember me</span>
               </label>
-              <Link href="/forgot-password" className="text-primary hover:text-primary/80 text-sm font-medium transition-colors">
+              <Link href="/forgot-password" className="text-black hover:text-neutral-700 text-sm font-medium transition-colors">
                 Forgot password?
               </Link>
             </div>
@@ -293,7 +284,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3.5 bg-primary text-[#101c22] font-bold rounded-lg hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(37,175,244,0.3)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-black text-white font-bold rounded-lg hover:bg-neutral-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <>
@@ -309,22 +300,22 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <p className="text-center text-slate-400 text-sm mt-8">
+          <p className="text-center text-neutral-500 text-sm mt-8">
             Don&apos;t have an account?{" "}
-            <Link href="/signup" className="text-primary font-bold hover:text-primary/80 transition-colors">
-              Sign up free
+            <Link href="/signup" className="text-black font-bold hover:text-neutral-700 transition-colors">
+              Start learning free
             </Link>
           </p>
 
           {/* Trust badges */}
-          <div className="mt-8 pt-8 border-t border-[#223c49]">
-            <div className="flex items-center justify-center gap-6 text-slate-500">
+          <div className="mt-8 pt-8 border-t border-neutral-300">
+            <div className="flex items-center justify-center gap-6 text-neutral-500">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-green-500 text-lg">verified</span>
+                <span className="material-symbols-outlined text-green-600 text-lg">verified</span>
                 <span className="text-xs">SSL Secure</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-green-500 text-lg">lock</span>
+                <span className="material-symbols-outlined text-green-600 text-lg">lock</span>
                 <span className="text-xs">256-bit Encryption</span>
               </div>
             </div>

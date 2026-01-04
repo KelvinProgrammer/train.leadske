@@ -1,16 +1,16 @@
 import Hero from "@/components/Hero"
 import TrustedBy from "@/components/TrustedBy"
+import Features from "@/components/Features"
 import Stats from "@/components/Stats"
 import Agents from "@/components/Agents"
-import Features from "@/components/Features"
 import Comparison from "@/components/Comparison"
 import Pricing from "@/components/Pricing"
 import Footer from "@/components/Footer"
 
 export const metadata = {
-  title: "AI Workforce Platform - Replace 2-5 Admin & Sales Roles",
+  title: "Media.LeadsKe.Pro - Professional Training Platform",
   description:
-    "Agentic AI system for sales, operations, and admin. Calendar scheduling, lead qualification, onboarding, reporting, and operations management - 24/7.",
+    "Master digital skills with structured learning paths. Get certified as a Virtual Assistant, Social Media Manager, Digital Marketer, or Sales Partner. Hands-on training with real LeadsKe tools.",
 }
 
 export default function Home() {
@@ -18,9 +18,9 @@ export default function Home() {
     <main className="w-full">
       <Hero />
       <TrustedBy />
+      <Features />
       <Stats />
       <Agents />
-      <Features />
       <Comparison />
       <Pricing />
       <Footer />
