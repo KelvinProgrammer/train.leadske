@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { signOut } from "next-auth/react"
 import {
   DropdownMenu,
@@ -11,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-export default function DashboardHeader({ user }) {
+export default function DashboardHeader({ user, onMenuClick }) {
   const initials = user?.name
     ?.split(" ")
     .map((n) => n[0])
@@ -20,11 +21,14 @@ export default function DashboardHeader({ user }) {
     .slice(0, 2) || "U"
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-neutral-800 px-6 py-3 bg-neutral-950 shrink-0">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-neutral-800 px-4 md:px-6 py-3 bg-neutral-950 shrink-0">
       {/* Left side */}
       <div className="flex items-center gap-4">
         {/* Mobile menu button */}
-        <button className="lg:hidden p-2 hover:bg-neutral-800 rounded-lg transition-colors">
+        <button
+          onClick={onMenuClick}
+          className="lg:hidden p-2 hover:bg-neutral-800 rounded-lg transition-colors"
+        >
           <span className="material-symbols-outlined text-neutral-400">menu</span>
         </button>
 
@@ -45,10 +49,13 @@ export default function DashboardHeader({ user }) {
       {/* Right side */}
       <div className="flex items-center gap-2">
         {/* Quick Action */}
-        <button className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-neutral-900 rounded-lg text-sm font-medium transition-colors">
+        <Link
+          href="/dashboard/courses"
+          className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-neutral-900 rounded-lg text-sm font-medium transition-colors"
+        >
           <span className="material-symbols-outlined text-lg">play_circle</span>
           <span>Continue Learning</span>
-        </button>
+        </Link>
 
         {/* Notifications */}
         <button className="p-2.5 hover:bg-neutral-800 rounded-lg relative transition-colors">
@@ -57,12 +64,12 @@ export default function DashboardHeader({ user }) {
         </button>
 
         {/* Help */}
-        <button className="p-2.5 hover:bg-neutral-800 rounded-lg transition-colors">
+        <button className="hidden sm:block p-2.5 hover:bg-neutral-800 rounded-lg transition-colors">
           <span className="material-symbols-outlined text-neutral-400">help</span>
         </button>
 
         {/* Divider */}
-        <div className="h-8 w-px bg-neutral-800 mx-2"></div>
+        <div className="hidden sm:block h-8 w-px bg-neutral-800 mx-2"></div>
 
         {/* User menu */}
         <DropdownMenu>
@@ -83,13 +90,23 @@ export default function DashboardHeader({ user }) {
           <DropdownMenuContent align="end" className="w-56 bg-neutral-900 border-neutral-800">
             <DropdownMenuLabel className="text-white">My Account</DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-neutral-800" />
-            <DropdownMenuItem className="text-neutral-300 hover:text-white hover:bg-neutral-800 cursor-pointer">
-              <span className="material-symbols-outlined mr-2 text-lg">person</span>
-              <span>Profile</span>
+            <DropdownMenuItem asChild className="text-neutral-300 hover:text-white hover:bg-neutral-800 cursor-pointer">
+              <Link href="/dashboard/profile" className="flex items-center w-full">
+                <span className="material-symbols-outlined mr-2 text-lg">person</span>
+                <span>Profile</span>
+              </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem className="text-neutral-300 hover:text-white hover:bg-neutral-800 cursor-pointer">
-              <span className="material-symbols-outlined mr-2 text-lg">workspace_premium</span>
-              <span>My Certifications</span>
+            <DropdownMenuItem asChild className="text-neutral-300 hover:text-white hover:bg-neutral-800 cursor-pointer">
+              <Link href="/dashboard/certifications" className="flex items-center w-full">
+                <span className="material-symbols-outlined mr-2 text-lg">workspace_premium</span>
+                <span>My Certifications</span>
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild className="text-neutral-300 hover:text-white hover:bg-neutral-800 cursor-pointer">
+              <Link href="/dashboard/settings" className="flex items-center w-full">
+                <span className="material-symbols-outlined mr-2 text-lg">settings</span>
+                <span>Settings</span>
+              </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator className="bg-neutral-800" />
             <DropdownMenuItem

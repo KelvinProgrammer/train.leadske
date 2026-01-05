@@ -136,7 +136,7 @@ export default function SignUpPage() {
               <div className="flex items-center justify-center rounded-lg bg-black/10 p-2.5">
                 <span className="material-symbols-outlined text-2xl text-black">school</span>
               </div>
-              <span className="text-xl font-bold text-black">Media.LeadsKe.Pro</span>
+              <span className="text-xl font-bold text-black">Train.LeadsKe.Pro</span>
             </Link>
           </div>
 
@@ -429,7 +429,7 @@ export default function SignUpPage() {
             <div className="flex items-center justify-center rounded-lg bg-black/10 p-2.5">
               <span className="material-symbols-outlined text-2xl text-black">school</span>
             </div>
-            <span className="text-xl font-bold text-black">Media.LeadsKe.Pro</span>
+            <span className="text-xl font-bold text-black">Train.LeadsKe.Pro</span>
           </Link>
 
           {/* Main Content */}

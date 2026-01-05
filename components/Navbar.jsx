@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="flex items-center justify-center rounded-lg bg-black/10 p-2">
             <span className="material-symbols-outlined text-black">school</span>
           </div>
-          <h2 className="text-black text-xl font-bold leading-tight tracking-[-0.015em]">Media.LeadsKe.Pro</h2>
+          <h2 className="text-black text-xl font-bold leading-tight tracking-[-0.015em]">Train.LeadsKe.Pro</h2>
         </Link>
 
         {/* Desktop Navigation */}

@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Bottom Footer */}
           <div className="mt-16 pt-8 border-t border-neutral-800 w-full flex flex-col md:flex-row justify-between items-center gap-4 text-neutral-500 text-sm">
-            <p>© 2025 Media.LeadsKe.Pro</p>
+            <p>© 2025 Train.LeadsKe.Pro</p>
             <div className="flex gap-6">
               <Link href="#" className="hover:text-white transition-colors">
                 Privacy

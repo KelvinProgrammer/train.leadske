@@ -8,7 +8,7 @@ import Pricing from "@/components/Pricing"
 import Footer from "@/components/Footer"
 
 export const metadata = {
-  title: "Media.LeadsKe.Pro - Professional Training Platform",
+  title: "Train.LeadsKe.Pro - Professional Training Platform",
   description:
     "Master digital skills with structured learning paths. Get certified as a Virtual Assistant, Social Media Manager, Digital Marketer, or Sales Partner. Hands-on training with real LeadsKe tools.",
 }

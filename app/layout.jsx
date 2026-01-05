@@ -14,9 +14,9 @@ const notoSans = Noto_Sans({
 })
 
 export const metadata = {
-  title: "Viralytics - AI Video Analysis Platform",
+  title: "Train.LeadsKe.Pro - Training VAs, SMM, and Digital Marketers",
   description:
-    "Analyze viral videos from TikTok, YouTube Shorts, and Instagram Reels. Get AI-powered insights, repurposing drafts, and viral scores.",
+    "Master digital skills with structured learning paths. Get certified as a Virtual Assistant, Social Media Manager, Digital Marketer, or Sales Partner. Hands-on training with real LeadsKe tools.",
   generator: "v0.app",
   icons: {
     icon: [
